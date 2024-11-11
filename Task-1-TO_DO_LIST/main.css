@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  padding: 16px 50px;
+  background: teal;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 60px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  padding-right: 100px;
+}
+
+ul li:hover {
+  background: #f0f0f0;
+}
+
+ul li input[type="checkbox"] {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+ul li span {
+  position: absolute;
+  right: 40px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+ul li span:last-child {
+  right: 0;
+}
+
+ul li span:hover {
+  background: #e0e0e0;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.notification button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* .card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after,
+.card::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient
+    (from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+} */
+
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 5px teal, 0 0 10px teal, 0 0 15px teal;
+  }
+  50% {
+    box-shadow: 0 0 10px #ff4545, 0 0 20px #ff4545, 0 0 30px #ff4545;
+  }
+  100% {
+    box-shadow: 0 0 5px teal, 0 0 10px teal, 0 0 15px teal;
+  }
+}
+
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid teal; /* Initial border */
+  animation: glowAnimation 2s infinite; /* Apply the glow animation */
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  border: 2px solid teal; /* Initial border */
+  animation: glowAnimation 2s infinite; /* Apply the glow animation */
+}
